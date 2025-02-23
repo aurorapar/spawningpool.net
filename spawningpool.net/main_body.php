@@ -1,4 +1,5 @@
 <?php
+    $web_contents = array();
     $content =[
          ['Home', 'You can check out my <a href="http://github.com/aurorapar">code repositories here</a>.']
         ,['About', get_web_content('../about.php')]
@@ -15,6 +16,6 @@
             return sprintf('No content for link %s exists', $link_title);
         }
         require($file_path);
-        return $web_contents;
+        return $web_contents[$link_title];
     }
 ?>

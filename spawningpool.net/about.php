@@ -1,3 +1,3 @@
 <?php
-    $web_contents = 'About test';
+    $web_contents['About'] = 'About test';
 ?>
