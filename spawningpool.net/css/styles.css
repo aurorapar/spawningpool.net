@@ -1,0 +1,46 @@
+
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #FFDDFF;
+}
+
+.site-title {
+    text-decoration: underline;
+}
+
+header{
+    margin: auto;
+    width: 100%;
+    height: 100px;
+}
+
+.main_header {
+    margin: auto;
+    width: 70%;
+}
+
+.main_header a {
+    text-decoration: none;
+    color: black;
+}
+
+.main_header table {
+    margin: auto;
+    table-layout: fixed;
+    width: 70vw;
+    font-size: 36px;
+    background-color: #FFCDFF;
+}
+
+.main_header td {
+    text-align: center;
+    width: 150px;
+    overflow: hidden;
+}
+
+.main_body {
+    padding-top: 100px;
+    margin: auto;
+    width: 65%;
+    font-size: 24px;
+}
