@@ -6,7 +6,7 @@
     }
     else
     {
-        $output = '<ul class="song_list">';
+        $output = '<div class="song_list">';
         foreach($catalog as $catalog_item)
         {
             $catalog_item_parts = explode('.', $catalog_item);
@@ -16,12 +16,11 @@
                 $catalog_title = $catalog_item_parts[0];
                 $catalog_title = str_replace('_', ' ', $catalog_title);
                 $catalog_title = ucwords($catalog_title);
-                $output = $output . '<li>';
                 $output = $output . '<a href="../songs/'. $catalog_item . '">&gt;&gt;</a><br>';
-                $output = $output . '<iframe src="../songs/'. $catalog_item . '" width="800" height="200"></iframe></li>';
+                $output = $output . '<iframe src="../songs/'. $catalog_item . '" height="200"></iframe>';
             }
         }
-        $output = $output . '</ul>';
+        $output = $output . '</div>';
 
         $web_contents['Songs'] = $output;
     }

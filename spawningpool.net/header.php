@@ -8,15 +8,12 @@
 <h1 class="site-title">The Spawning Pool</h1>
 
 <div class="main_header">
-    <table>
-        <tr>
-            <?php
-                foreach($content as $content_key => $content_value)
-                {
-                    $link_name = $content_value[0];
-                    echo '<td><a class="header_link" id="' . $link_name . '-link" href="#">[' . $link_name . ']</a></td>';
-                }
-            ?>
-        </tr>
-    </table>
+   <ul>
+    <?php
+        foreach($content as $content_key => $content_value)
+        {
+            $link_name = $content_value[0];
+            echo '<li><a class="header_link" id="' . $link_name . '-link" href="#">[' . $link_name . ']</a></li>';
+        }
+    ?>
 </div>
