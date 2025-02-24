@@ -14,7 +14,7 @@
                 foreach($content as $content_key => $content_value)
                 {
                     $link_name = $content_value[0];
-                    echo '<td><a class="header_link" href="#">' . $link_name . '</a></td>';
+                    echo '<td><a class="header_link" id="' . $link_name . '-link" href="#">[' . $link_name . ']</a></td>';
                 }
             ?>
         </tr>

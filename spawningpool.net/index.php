@@ -11,9 +11,12 @@
         </header>
 
         <div class="main_body">
-            <?php
-                echo $content[0][1];
-            ?>
+            <script>
+                $(document).ready(function () {
+                    $('#Home-link').click();
+                });
+            </script>
+        </div>
     </body>
 
     <footer>

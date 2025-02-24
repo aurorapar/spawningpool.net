@@ -1,9 +1,10 @@
 <?php
     $web_contents = array();
     $content =[
-         ['Home', 'You can check out my <a href="http://github.com/aurorapar">code repositories here</a>.']
+         ['Home', get_web_content('../home.php')]
         ,['About', get_web_content('../about.php')]
         ,['Servers', get_web_content('../servers.php')]
+        ,['Songs', get_web_content('../songs.php')]
     ];
 
 

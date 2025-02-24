@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
     $(".header_link").click(function (event) {
-        let input = event.target.text;
+        let input = event.target.text.replace('[', '').replace(']', '');
         if (input.length !== 0) {
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function () {
