@@ -1,5 +1,5 @@
 <?php
-    $catalog = scandir('../songs/');
+    $catalog = scandir('songs/');
     if(!$catalog)
     {
         $web_contents['Songs'] = 'No songs at this time';

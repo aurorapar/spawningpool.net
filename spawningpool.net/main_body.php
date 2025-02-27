@@ -1,22 +1,22 @@
 <?php
     $web_contents = array();
-    $content =[
-         ['Home', get_web_content('../home.php')]
-        ,['About', get_web_content('../about.php')]
-        ,['Servers', get_web_content('../servers.php')]
-        ,['Songs', get_web_content('../songs.php')]
-    ];
+
+    $content_files = [];
+    $content_files['Home'] = 'home.php';
+    $content_files['About'] = 'about.php';
+    $content_files['Servers'] = 'servers.php';
+    $content_files['Songs'] = 'songs.php';
 
 
-    function get_web_content($file_path)
+    function get_web_content($content_name)
     {
-        $link_title = explode('/', $file_path)[1];
-        $link_title = ucwords(explode('.', $link_title)[0]);
-        if(!file_exists($file_path))
-        {
-            return sprintf('No content for link %s exists', $link_title);
-        }
-        require($file_path);
-        return $web_contents[$link_title];
+        $output = [];
+        global $content_files, $web_contents;
+
+        if(!array_key_exists($content_name, $content_files) || !file_exists($content_files[$content_name]))
+           return sprintf('No content for link %s exists<br>', $content_name);
+
+        require($content_files[$content_name]);
+        return $web_contents[$content_name];
     }
 ?>
